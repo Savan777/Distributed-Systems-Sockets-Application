@@ -1,0 +1,6 @@
+ID,Question,Answer
+1,Who won the 2019 NBA finals?,raptors
+2,What is the largest continet of the world?,asia
+3,What is the largest ocean of the world?,pacific ocean
+4,How many bones are there in the human body?,206
+5,Which Friday brings alot of happiness?,black friday
