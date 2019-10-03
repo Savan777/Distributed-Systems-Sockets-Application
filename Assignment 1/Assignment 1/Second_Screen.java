@@ -151,7 +151,13 @@ public class Second_Screen extends JFrame {
 		btnHint = new JButton("Hint");
 		btnHint.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				JOptionPane.showMessageDialog(txtrQuestion,"A Hint.html file has been created, take a look on the Desktop for it.","Hint",JOptionPane.INFORMATION_MESSAGE);
+				try {
+					getHint();
+					JOptionPane.showMessageDialog(txtrQuestion,"A Hint.html file has been created, take a look on the Desktop for it.","Hint",JOptionPane.INFORMATION_MESSAGE);
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 			}
 		});
 		GridBagConstraints gbc_btnHint = new GridBagConstraints();
@@ -196,7 +202,9 @@ public class Second_Screen extends JFrame {
 		//display the question
 		txtrQuestion.setText("Question: "+question);
 		txtAnswer.setText("");
-		
+	}
+	
+	public void getHint() throws IOException {
 		final String GOOGLE_SEARCH_URL = "https://www.google.com/search";
 		String searchURL = GOOGLE_SEARCH_URL + "?q="+question.toString()+"&num="+2;
 		Document doc = Jsoup.connect(searchURL).userAgent("Mozilla/5.0").get();
@@ -212,6 +220,7 @@ public class Second_Screen extends JFrame {
 			String linkText = result.text();
 			System.out.println("Text::" + linkText + ", URL::" + linkHref.substring(6, linkHref.indexOf("&")));
 		}
+		
 	}
 	
 }
