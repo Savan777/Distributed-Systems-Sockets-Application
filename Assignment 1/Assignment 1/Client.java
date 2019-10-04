@@ -11,6 +11,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+//this class will be used to communicate to the server, send and recieve requests.
+//the client_gui will be leveraging the functions in this class for communications.
 public class Client {
 	static Socket client;
 	static BufferedReader in;
@@ -82,6 +84,7 @@ public class Client {
 		Files.write(outputPath,list,Charset.defaultCharset());
 	}
 	
+	//this will close the connection established
 	public static void closeConnection() throws Exception {
 			
 			//client.close;
