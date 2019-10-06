@@ -1,4 +1,4 @@
-"# assignment1fall2019-Savan777" 
+"# Simple Distributed Systems application using sockets" 
 
 <h2>Dependencies</h2>
 <p>After downloading the project folder and opening it in eclipse you first need to add the JSoup.jar file that came with this package.To add the JSoup.jar file to the project follow these steps:
